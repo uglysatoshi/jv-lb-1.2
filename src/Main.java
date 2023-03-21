@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
+    static Scanner in = new Scanner(System.in);
     public static void Base() {
-        Scanner in = new Scanner(System.in);
         System.out.print("Введите амплитуду колебания: "); double a = in.nextDouble();
         int T = 2; double m = 0.2;
         double W = (2 * Math.pow(Math.PI, 2) * Math.pow(a, 2) * m) / Math.pow(T, 2);
