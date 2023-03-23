@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
-    static Scanner in = new Scanner(System.in);
     public static void Base() { // функция базового уровня
+        Scanner in = new Scanner(System.in);
         // Так как ввод T в функцию происходит через константы, следовательно ограничение ввода не требуется и деления на ноль никогда не произойдет
         System.out.print("Введите амплитуду колебания: "); double a = in.nextDouble(); // ввод значения a
         final int T = 2; // объявляем T как константу и передаем в нее 2
