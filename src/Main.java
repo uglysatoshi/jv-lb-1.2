@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
+    static final double scale = Math.pow(10,3);
     static Scanner in = new Scanner(System.in);
     public static void Base() { // функция базового уровня
         // Так как ввод T в функцию происходит через константы, следовательно ограничение ввода не требуется и деления на ноль никогда не произойдет
@@ -8,7 +9,7 @@ public class Main {
         final int T = 2; // объявляем T как константу и передаем в нее 2
         final double m = 0.2; // объявляем m как константу и передаем в нее 0.2
         double W = (2 * Math.pow(Math.PI, 2) * Math.pow(a, 2) * m) / Math.pow(T, 2); // функция W
-        System.out.println("Энергия материальной точки: " + W); // вывод W
+        System.out.println("Энергия материальной точки: " + Math.ceil(W * scale) / scale); // вывод W
     }
 
     public static void Medium() {
@@ -16,7 +17,7 @@ public class Main {
         final int m = 2; // объявляем m как константу и передаем в нее 2
         final double x = 1.1; // объявляем x как константу и передаем в нее 1.1
         double y = Math.sin((Math.sqrt(Math.abs(x))) + Math.pow(Math.tan(Math.toDegrees(Math.pow(x, 4) + Math.pow(m, 2))), 3)); // Функция y
-        System.out.println("Функция Y: " + y); // Выводим y
+        System.out.println("Функция Y: " + Math.ceil(y * scale) / scale); // Выводим y
     }
 
     public static void Hard() {
@@ -27,7 +28,7 @@ public class Main {
         double I = U * Math.sqrt(C / L); // Находим I
         double W = (L * Math.pow(I, 2) / 2); // Находим W
         System.out.println("Амплитуда силы тока: " + I + " A"); // Выводим I
-        System.out.println("Полная энергия: " + W + " Дж"); // Выводим W
+        System.out.println("Полная энергия: " + Math.ceil(W * scale) / scale + " Дж"); // Выводим W
     }
     public static void main(String[] args) {
         Base();
